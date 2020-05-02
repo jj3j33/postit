@@ -1,0 +1,76 @@
+@import url('https://fonts.googleapis.com/css?family=Noto+Sans+TC&display=swap')
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css')
+
+$colorYellow: #FFEB67
+$colorBlue: #A5D8D6
+$colorRed: #EF898C
+$colorGreen: #CBE196
+
+@mixin size($w, $h:$w)
+  width: $w
+  height: $h
+  
+@mixin flexCenter
+  display: flex
+  justify-content: center
+  align-items: center
+  
+@keyframes fadeIn
+  0%
+    opacity: 0
+  100%
+    opacity: 1
+
+*
+  font-family: 'Noto Sans TC', sans-serif
+html, body
+  +size(100%)
+  margin: 0
+  background-color: #444
+#app
+  +size(100%)
+.postgroup
+  position: absolute
+  .postit
+    +size(100px)
+    +flexCenter
+    box-shadow: 10px 10px 30px rgba(0, 0, 0, .5)
+    cursor: pointer
+    transition: 0.5s
+    .text
+      +size(100px, auto)
+      color: #444
+      text-align: center
+      background-color: transparent
+      border: none
+      transition: 0.3s
+      &:focus
+        outline: none
+  .edit
+    display: none
+    +size(100px, auto)
+    margin-top: 5px
+    .colorBlock
+      +size(15px)
+      cursor: pointer
+    i.fa.fa-trash
+      color: rgba(#fff, .8)
+      font-size: 15px
+      cursor: pointer
+    &.isHover
+      display: flex
+      justify-content: space-around
+      animation: fadeIn 1s
+i.fa.fa-plus-square
+  font-size: 36px
+  color: rgba(white, .8)
+  position: absolute
+  right: 20px
+  bottom: 10px
+  cursor: pointer
+  
+.fade-enter-active, .fade-leave-active 
+  transition: .5s
+.fade-enter, .fade-leave-to
+  opacity: 0
+  transform: scale(0)
