@@ -1,9 +1,3 @@
-// import Vue from '../../vue';
-// import firebase from '../../firebase';
-
-// const Vue = require('Vue');
-// const firebase = require('firebase');
-
 var firebaseConfig = {
     apiKey: "AIzaSyB7RvFO4z78Y6tHGDlLgBXG-7PVD9Tm5P8",
     authDomain: "postit-6c3c4.firebaseapp.com",
